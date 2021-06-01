@@ -1,0 +1,18 @@
+form
+{
+    margin: 20px;
+}
+button
+{
+    margin: 10px;
+}
+img
+{    
+    float:right;
+    width: 100%;
+    margin: 20px;
+    max-width: 700px;
+    height: 400px;
+    right: 100px;
+    text-align: center;
+}

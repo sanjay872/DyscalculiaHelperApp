@@ -1,0 +1,32 @@
+<body>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+          <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+          <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9 col-lg-8 mx-auto">
+                    <b><h1 class="login-heading mb-4" >Welcome back!</h1></b>
+                    <form (ngSubmit)="onSubmit(form)" #form='ngForm'>
+                        <div class="form-group mb-3">
+                            <input name="email" type="email" placeholder="Email address" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" ngModel required >
+                        </div>
+                        <div class="form-group mb-3">
+                            <input name="password" type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" ngModel required >
+                        </div>
+                        <div class="alert alert-danger" *ngIf="!loginstatus">
+                          <p>Incorrect Email or Password</p>
+                        </div>
+                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" [disabled]="!form.valid">Sign in</button>
+                      <div class="text-center">
+                        <b><span style="color: white">New User ? </span> <a  routerLink="/signup" style="color:red">Register</a></b><p></p><span><a routerLink="/" style="color: white">Home</a></span>&nbsp;|&nbsp;<span><a routerLink="/about" style="color: white">About Us</a></span></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>

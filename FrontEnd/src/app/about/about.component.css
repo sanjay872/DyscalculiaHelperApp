@@ -1,0 +1,27 @@
+.backgroundimg{
+    background-image: url('../../assets/aboutus/back1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin-right: 0.5px;
+}
+
+.h1{
+    padding-top: 35vh;
+    color: rgb(252, 56, 56);
+    
+}
+
+.footer-area{
+    /* background-color: rgb(165, 165, 165); */
+    padding: 10px;
+    background-color: grey;
+    height: 163px;
+    
+  }
+#back
+{
+    width: 100px;
+    height: 50px;
+}

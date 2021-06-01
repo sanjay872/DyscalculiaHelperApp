@@ -1,0 +1,13 @@
+<div class="col-md-9 col-lg-8 mx-auto">
+        <form (ngSubmit)="showGraph(form.value.section)" #form='ngForm'>
+            <select name="section" id="" class="btn btn-primary" #section ngModel required>
+                <option value="">select</option>
+                <option value="add">Addition</option>
+                <option value="sub">Subraction</option>
+                <option value="mul">Multiplication</option>
+                <option value="mix">Mixed</option>
+            </select>
+                <button class="btn btn-success" type="submit" [disabled]="!form.valid">Show Results</button>
+        </form>
+            <img [src]="this.imageToShow" alt="" *ngIf="showgraph">
+</div>

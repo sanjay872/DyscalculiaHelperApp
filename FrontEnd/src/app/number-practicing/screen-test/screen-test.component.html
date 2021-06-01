@@ -1,0 +1,45 @@
+<app-loader *ngIf="!loaded"></app-loader>
+<div class="container mt-5" *ngIf="qns!=null&&loaded">
+    <h2>{{time.hr}}:{{time.min}}:{{time.sec}}</h2>
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <form class="border" (ngSubmit)="onSubmit(form)" #form='ngForm'>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>MCQ Quiz</h4><span>{{pos+1}}</span>
+                    </div>
+                </div>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">{{qns[pos].question}}</h5>
+                    </div>
+                    <div *ngIf="qns[pos].questionimg!=null">
+                        <br>
+                        <img [src]="qns[pos].questionimg">
+                        <br>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="option" [value]="qns[pos].option1" ngModel> <span>{{qns[pos].option1}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="option" [value]="qns[pos].option2" ngModel> <span>{{qns[pos].option2}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="option" [value]="qns[pos].option3" ngModel> <span>{{qns[pos].option3}}</span>
+                        </label>
+                    </div>
+                    <div class="ans ml-2">
+                        <label class="radio"> <input type="radio" name="option" [value]="qns[pos].option4" ngModel> <span>{{qns[pos].option4}}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white" *ngIf="teststatus"><button class="btn btn-primary d-flex align-items-center btn-success" type="submit"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Check</button></div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white" *ngIf="!teststatus"><button class="btn btn-primary d-flex align-items-center btn-danger" type="button" (click)="exit()"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Exit</button></div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-result *ngIf="enableResult" [res]="res" (close)="onClose()"></app-result>

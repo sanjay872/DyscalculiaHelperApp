@@ -1,0 +1,9 @@
+<div>
+        <div class="card" *ngIf="this.userProfile!=null">
+                <img src="../../assets/profile/background.jpg" style="width:100%">
+                <h1>{{this.userProfile.firstName}} {{this.userProfile.lastName}}</h1>
+                <p class="title">Age : {{this.userProfile.age}}</p>
+                <p><button>{{this.userProfile.email}}</button></p>
+        </div>
+        <app-graph></app-graph>
+</div>

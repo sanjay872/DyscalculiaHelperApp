@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit(form)" #form='ngForm' class="container-fluid">
+    <div class="section">
+        <label for="section">SECTION</label>
+        <hr>
+        <select name="section" class="btn btn-primary" style="width: max-content;" ngModel required>
+            <option value="">Select</option>
+            <option value="add">Addition</option>
+            <option value="sub">Subraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="mix">Mixed</option>
+        </select>
+    </div>
+    <br><br>
+    <div class="level">
+        <label for="level">LEVEL</label>
+        <hr>
+        <select name="level" class="btn btn-primary" style="width: max-content;" ngModel required> 
+            <option value="">Select</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="!form.valid" >Start</button>
+</form>

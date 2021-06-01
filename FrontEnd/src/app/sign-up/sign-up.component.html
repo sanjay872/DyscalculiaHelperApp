@@ -1,0 +1,66 @@
+<body>
+    <br> <br> <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-xl-9 mx-auto" >
+            <div class="card card-signin flex-row my-5">
+              <div class="card-img-left d-none d-md-flex">
+              </div>
+              <div class="card-body ">
+                <h5 class="card-title text-center">Register</h5>
+                <form class="form-signin" (ngSubmit)="onSubmit(form)" #form='ngForm'>
+                  <div class="form-group mb-3">
+                      <input name="firstName" type="text" placeholder="FirstName"  autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" required ngModel >
+                    </div>  
+                  <div class="form-group mb-3">
+                    <input name="lastName" type="text" placeholder="LastName"  autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" required ngModel >
+                </div>
+                <div class="form-group mb-3">
+                    <input name="age" type="number" placeholder="Age" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" required ngModel >
+                </div>
+                  <div class="form-group mb-3">
+                      <input name="email" type="email" placeholder="Email address" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" data-validate = "Valid email is required: ex@abc.xyz" required ngModel #email='ngModel'>
+                  </div>
+                  
+                  <hr>
+    
+                  <div class="form-group mb-3">
+                      <input name="password" type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" data-validate="Password is required" required ngModel #password='ngModel'>
+                  </div>
+                  
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" [disabled]="(!form.valid)">Register</button><br>
+                  <div class="text-center">
+                  <div class="alert alert-danger" role="alert" *ngIf="errorstatus">
+                        user already Exist
+                  </div>
+                  <div class="alert alert-success" role="alert" *ngIf="registered">
+                    Registered!!
+                  </div>
+                  <span>Already have an account ? </span> <a routerLink="/signin">Sign In</a><br>
+                  <span><a routerLink="/" style="color: black">Home</a></span>&nbsp;|&nbsp;<span><a routerLink="/about" style="color:black">About Us</a></span></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br> -->
+    </body>
+  <footer class="page-footer ">
+  
+    <div class="container">
+  
+      <ul class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <b><h1 class="mb-1">Contact us  :</h1></b>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="footer-copyright text-center ">
+      <b><span class="text-center"> Mobile No: +91 9874563210</span><br>
+      <span class="text-center" >Email : abcc@gmail.com</span></b>
+    </div>
+  
+  </footer>
+  

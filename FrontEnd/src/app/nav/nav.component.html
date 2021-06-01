@@ -1,0 +1,30 @@
+<div *ngIf="userlogged&&!testStarted">
+  <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #2a9bec;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dyscalculia Helper</a>
+      <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse" >
+        <ul class="navbar-nav mr-auto">
+            <br>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/profile" style="color: rgb(255, 255, 255)" > Profile <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/numberRec" style="color: rgb(255, 255, 255);">Number Recognition</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/numberPar" style="color: rgb(255, 255, 255);">Number Practicing</a>
+          </li>
+        </ul>
+        <hr>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+              <a (click)="logout()" style="color: rgb(255, 255, 255);"> Logout</a></li> 
+        </ul>
+      </div>
+    </div>
+    </nav>
+</div>

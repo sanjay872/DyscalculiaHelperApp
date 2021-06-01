@@ -1,0 +1,9 @@
+<div class="backdrop" (click)="onClose()"></div>
+<div  class="box" (click)="onClose()">
+    <div *ngIf="res==1">
+        <h1>Correct</h1>
+     </div>
+     <div *ngIf="res==0">
+        <h1>Wrong</h1>
+     </div>
+</div>
