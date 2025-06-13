@@ -59,7 +59,7 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 
 ## 📸 Screenshots
 
-### Home Page 
+### Home 
 ![Home](Screenshots/Home.png) 
 ### SignIn
 ![Voice Mode](Screenshots/SignIn.png) 
