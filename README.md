@@ -32,8 +32,8 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 - **MFCC + CNN Model** for voice-based number recognition
 - Trained using TensorFlow/Keras
 - Audio input processed with `pydub` and predictions served via Flask API
-**Test Accuracy**
-  ![TestAccuracy](Screenshots/TestAccuracy.png) 
+  
+![TestAccuracy](Screenshots/TestAccuracy.png) 
 
 ## 🧠 Key Features
 
