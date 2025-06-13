@@ -62,7 +62,7 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js + Angular CLI
+- Node.js (14.20.0) + Angular CLI (npm -6.14.14)
 - Java 11+
 - Python 3.8+
 - MySQL
