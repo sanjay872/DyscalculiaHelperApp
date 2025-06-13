@@ -11,7 +11,7 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 > 📅 July 2021
 
 ## 🧩 System Architecture
-![Architecture](Screenshots/Architecture.png) 
+![Architecture](Screenshots/architecture.png) 
 
 ## 🔧 Tech Stack
 
