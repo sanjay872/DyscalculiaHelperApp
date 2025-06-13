@@ -10,6 +10,9 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 > 🎓 B.E. in Computer Science, St. Joseph’s Institute of Technology, Chennai  
 > 📅 July 2021
 
+## 🧩 System Architecture
+![Architecture](Screenshots/Architecture.png) 
+
 ## 🔧 Tech Stack
 
 ### Frontend:
