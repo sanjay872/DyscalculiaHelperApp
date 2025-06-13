@@ -11,12 +11,17 @@ import matplotlib.pyplot as plt
 from flask_sqlalchemy import SQLAlchemy; #for database connection
 from flask_marshmallow import Marshmallow;
 from sqlalchemy import text
+import urllib.parse
 
 # instantiate flask app
 app = Flask(__name__)
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI']='mysql://sanjay:sanjay@localhost/DyscalculiaHelper' #DB URI
+user = 'root' # database user 
+password = 'root' # database password
+encoded = urllib.parse.quote_plus(password)
+
+app.config['SQLALCHEMY_DATABASE_URI']='mysql+mysqlconnector://'+user+':'+encoded+'@localhost/DyscalculiaHelper' #DB URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False #to avoid warning
 
 
@@ -78,13 +83,14 @@ def createGraph():
 	x_label=['easy','medium','hard']
 	y_label=[]
 	sql = text('select score,level from test_results where user_id="'+user_id+'" and section="'+section+'";')
-	result = db.engine.execute(sql)
+	with db.engine.connect() as connection:
+		result = connection.execute(sql)
 	for row in result:	
 		data[row[1]]=row[0]
 	for i in range(3):
 		y_label.append(data[x_label[i]])
 	plt.switch_backend('agg')
-	fig = plt.figure(figsize = (10, 5))
+	fig = plt.figure(figsize=(10, 6), dpi=150)
 
 	levels=[1,2,3]
 

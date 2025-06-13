@@ -14,11 +14,11 @@
                         <h3 class="text-danger">Q.</h3>
                         <h5 class="mt-1 ml-2">{{qns[pos].question}}</h5>
                     </div>
-                    <div *ngIf="qns[pos].questionimg!=null">
+                    <!-- <div *ngIf="qns[pos].questionimg!=null">
                         <br>
                         <img [src]="qns[pos].questionimg">
                         <br>
-                    </div>
+                    </div> -->
                     <div class="ans ml-2">
                         <label class="radio"> <input type="radio" name="option" [value]="qns[pos].option1" ngModel> <span>{{qns[pos].option1}}</span>
                         </label>

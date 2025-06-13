@@ -1,13 +1,50 @@
-<div class="col-md-9 col-lg-8 mx-auto">
-        <form (ngSubmit)="showGraph(form.value.section)" #form='ngForm'>
-            <select name="section" id="" class="btn btn-primary" #section ngModel required>
-                <option value="">select</option>
-                <option value="add">Addition</option>
-                <option value="sub">Subraction</option>
-                <option value="mul">Multiplication</option>
-                <option value="mix">Mixed</option>
-            </select>
-                <button class="btn btn-success" type="submit" [disabled]="!form.valid">Show Results</button>
-        </form>
-            <img [src]="this.imageToShow" alt="" *ngIf="showgraph">
+<div class="container my-5">
+  <div
+    class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-5"
+  >
+    <!-- Graph (Left) -->
+    <div *ngIf="showgraph" class="text-center">
+      <img
+        [src]="imageToShow"
+        alt="Result Graph"
+        class="img-fluid rounded shadow"
+      />
+    </div>
+
+    <!-- Dropdown Form (Right) -->
+    <div class="flex-fill" style="min-width: 300px; max-width: 400px;">
+      <form
+        class="p-4 border rounded shadow-sm bg-light"
+        (ngSubmit)="showGraph(form.value.section)"
+        #form="ngForm"
+      >
+        <div class="mb-3 text-center">
+          <label for="section" class="form-label fw-semibold">Choose Section</label>
+          <select
+            name="section"
+            id="section"
+            class="form-select"
+            ngModel
+            required
+          >
+            <option value="">-- Select --</option>
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="mix">Mixed</option>
+          </select>
+        </div>
+
+        <div class="text-center">
+          <button
+            class="btn btn-success px-4"
+            type="submit"
+            [disabled]="!form.valid"
+          >
+            Show Results
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

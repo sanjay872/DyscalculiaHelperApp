@@ -1,74 +1,58 @@
-<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #2a9bec;" *ngIf="!logged">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Dyscalculia Helper</a>
-      <button class="navbar-toggler" (click)="collapse=!collapse" type="button" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="navbar-collapse" (click)="collapse=true" [hidden]="collapse" >
-        <ul class="navbar-nav mr-auto">
-            <br>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/" style="color: rgb(255, 255, 255)" >Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about" style="color: rgb(255, 255, 255);">About</a>
-          </li>
-        </ul>
-        <hr>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item">
-              <a routerLink="/signin" style="color: rgb(255, 255, 255);"> Login </a></li> 
-        </ul>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item">
-              <a routerLink="/signup" style="color: rgb(255, 255, 255);"> Signup</a></li>
-        </ul>
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow" *ngIf="!logged">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-white" href="#">Dyscalculia Helper</a>
+
+    <button class="navbar-toggler" type="button" (click)="collapse = !collapse" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" [ngClass]="{ show: !collapse }">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/about">About</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <a class="btn btn-outline-light btn-sm m-2" routerLink="/signin">Login</a>
+        <a class="btn btn-light btn-sm text-primary fw-semibold" routerLink="/signup">Sign Up</a>
       </div>
     </div>
-    </nav>
+  </div>
+</nav>
 
-    <div class='container-fluid'>  
-        <div class="row">  
-            <div class="col-sm-12 ">  
-            </div>  
-        </div>  
-        <br><br>
-        <div class='col-12'>  
-            <ngb-carousel>  
-                <ng-template ngbSlide>  
-                    <img src="assets/home/slide14.jpg" alt="Delhi Metro" >  
-                    <div class="carousel-caption">  
-                        <h3 style="color: yellow"></h3>  
-                    </div>  
-                </ng-template>  
-                <ng-template ngbSlide>  
-                    <img src="assets/home/slide15.jpg" alt="Bangalore Metro">  
-                    <div class="carousel-caption">  
-                        <h3 style="color: yellow"></h3>  
-                    </div>  
-                </ng-template>  
-                <ng-template ngbSlide>  
-                    <img src="assets/home/slide16.jpg" alt="Channai Metro">  
-                    <div class="carousel-caption">  
-                        <h3 style="color: yellow"></h3>  
-                    </div>  
-                </ng-template>  
-                <ng-template ngbSlide>  
-                    <img src="assets/home/slide17.jpg" alt="Jaipur Metro">  
-                    <div class="carousel-caption">  
-                        <h3 style="color: yellow"></h3>  
-                    </div>  
-                </ng-template>  
-                <ng-template ngbSlide>  
-                    <img src="assets/home/slide18.jpg" alt="Mumbai Metro">  
-                    <div class="carousel-caption">  
-                        <h3 style="color: yellow"></h3>  
-                    </div>  
-                </ng-template>  
-            </ngb-carousel>  
-        </div>  
-      
+<!-- Intro + Image Collage Section -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <!-- Collage -->
+    <div class="col-md-6 mb-4 mb-md-0">
+      <div class="row g-2">
+        <div class="col-6">
+          <img src="assets/home/intro-image1.jpg" class="img-fluid rounded shadow-sm" alt="Image 1">
+        </div>
+        <div class="col-6">
+          <img src="assets/home/intro-image2.jpg" class="img-fluid rounded shadow-sm" alt="Image 2">
+        </div>
+        <div class="col-6">
+          <img src="assets/home/intro-image3.jpg" class="img-fluid rounded shadow-sm" alt="Image 3">
+        </div>
+        <div class="col-6">
+          <img src="assets/home/intro-image4.jpg" class="img-fluid rounded shadow-sm" alt="Image 4">
+        </div>
       </div>
-      
+    </div>
+
+    <!-- Text -->
+    <div class="col-md-6 text-center text-md-start">
+      <h2 class="fw-bold text-primary mb-3">Empowering Young Minds</h2>
+      <p class="lead text-muted">
+        An <strong>AI-powered educational web application</strong> designed to help children with <strong>dyscalculia</strong>—
+        a mathematics learning disability—improve their number sense and arithmetic skills through
+        engaging voice and text-based practice modules.
+      </p>
+    </div>
+  </div>
+</div>
