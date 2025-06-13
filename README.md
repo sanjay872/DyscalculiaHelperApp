@@ -33,7 +33,7 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 - Trained using TensorFlow/Keras
 - Audio input processed with `pydub` and predictions served via Flask API
   
-![TestAccuracy](Screenshots/testAccuracy.png) 
+![TestAccuracy](Screenshots/testAccuracy.jpg) 
 
 ## 🧠 Key Features
 
