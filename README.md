@@ -54,10 +54,18 @@ Children with dyscalculia struggle with basic number concepts, often finding it 
 
 ## 📸 Screenshots
 
-| Home Page | Voice Mode | Dashboard |
-|-----------|------------|-----------|
-| ![Home](screenshots/home.png) | ![Voice Mode](screenshots/voice.png) | ![Dashboard](screenshots/graph.png) |
-
+### Home Page 
+![Home](Screenshots/Home.png) 
+### SignIn
+![Voice Mode](Screenshots/SignIn.png) 
+### Signup
+![Voice Mode](Screenshots/SignUp.png) 
+### Dashboard
+![Dashboard](Screenshots/Profile.png)
+### Voice Mode
+![Voice Mode](Screenshots/VoiceRecognition.png) 
+### Quiz   
+![Voice Mode](Screenshots/quiz.png) 
 
 ## 🚀 Getting Started
 
@@ -78,7 +86,7 @@ cd BackEnd
 
 #### 2. ML Server (Flask)
 ```bash
-cd flask-server
+cd flask
 pip install -r requirements.txt
 python server.py
 ```
@@ -92,7 +100,7 @@ ng serve
 
 #### 4. Database (Mysql)
 ```sql
-create database DyscalculiaHelper
+Run the scripts that are in the backend folder
 ```
 
 ## 📈 Future Improvements
